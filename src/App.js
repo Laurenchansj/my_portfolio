@@ -1,11 +1,15 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { animateScroll as scroll } from 'react-scroll';
 import About from './About';
 import Projects from './Projects';
+import Wave from 'react-wavify';
 
 export default function App() {
+  const myName = `
+    < Tzechi_Chan />
+  `;
   const [ text ] = useTypewriter({
     words: ['Welcome everyone,', 'My name is Tzechi.'],
     loop: true,
@@ -33,14 +37,27 @@ export default function App() {
     }
   };
 
+  const [contact_me_hover, setContactMeHover] = useState(false);
+
+  const handleGoToTopClick = () => {
+    const topDiv = document.getElementById('top');
+    if (topDiv) {
+      scroll.scrollTo(topDiv.offsetTop, {
+        duration: 500,
+        smooth: 'easeInOutQuad'
+      });
+    }
+  };
+
+
   return (
     <div className="App">
-      <nav className='navbar'>
+      <nav id='top' className='navbar'>
         <div className='navbar-left name-div'>
-          Tzechi Chan
+          { myName }
         </div>
         <div className='navbar-right'>
-          <div className='nav-btn nav-about-btn' onClick={handleAboutClick}>About</div>
+          <div className='nav-btn nav-about-btn' onClick={handleAboutClick} options={{height: 20}}>About</div>
           <div className='nav-btn nav-projects-btn' onClick={handleProjectsClick}>Projects</div>
         </div>
       </nav>
@@ -49,18 +66,31 @@ export default function App() {
           { text }<span><Cursor cursorStyle ='|'/></span>
         </span> 
         <div className='contact-me-div'>
-          <div className='linkedin-icon'>in</div>
-          <div className='github-icon'>GitHub</div>
+          <a className='linkedin-icon' href='https://www.linkedin.com/in/tzechi-chan/' target='_blank' rel='noreferrer'>in</a>
+          <a className='github-icon' href='https://github.com/Laurenchansj' target='_blank' rel='noreferrer'>GitHub</a>
           <div>|</div>
-          <div className='contact-me-icon'>Contact me</div>
+          <div className='contact-me-icon' onMouseEnter={() => setContactMeHover(true)} onMouseLeave={() => setContactMeHover(false)}>
+            {contact_me_hover ? '@ Email Me' : 'Contact Me'}
+          </div>
         </div>
+        <Wave fill='#008080' paused={false} options={{height: 60, amplitude:60, speed: 0.15, points: 4}}></Wave>
       </div>
       <div id='about' className='about-section-div'>
         <About />
+        <div className='top-btn-div'>
+          <div onClick={handleGoToTopClick} className='top-btn'>^</div>
+        </div>
       </div>
       <div id='projects' className='project-section-div'>
         <Projects />
+        <div className='top-btn-div'>
+          <div onClick={handleGoToTopClick} className='top-btn'>^</div>
+        </div>
       </div>
+      <footer className='footer-div'>
+        <div className='footer-name'>Made by Tzechi Chan</div>
+        <div className='footer-email'>laurenchansj@gmail.com</div>
+      </footer>
     </div>
   );
 }

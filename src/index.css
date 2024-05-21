@@ -14,7 +14,8 @@ code {
 body {
   /* width: 100%; */
   height: 100%;
-  background-color: rgb(255, 230, 202);
+  /* background-color: rgb(255, 230, 202); */
+  background-color: #fdeb92;
   font-family: 'Ubuntu Sans Mono';
 }
 
@@ -26,8 +27,10 @@ body {
   padding: 10px 0;
   font-size: 1.3rem;
   font-weight: bold;
-  color: rgb(104, 54, 0);
-  border-bottom: 1px solid rgb(142, 75, 0);
+  /* color: rgb(104, 54, 0); */
+  color: #c6a502;
+  border-bottom: 2px solid #e8c100;
+  overflow: hidden;
 }
 
 .name-div {
@@ -40,38 +43,67 @@ body {
 }
 
 .nav-btn {
+  position: relative;
   padding: 10px 15px;
   border-radius: 5px;
-  background-color: rgb(130, 79, 22);
-  color: rgb(255, 255, 255);
-  font-family: 'Ubuntu Sans Mono';
-  /* border: 1px solid rgb(104, 54, 0); */
+  border: 1px solid #008080;
+  color: #008080;
+  background-color: transparent;
+  /* background-color: #008080; */
+  /* color: #ffec8b; */
   cursor: pointer;
+  font-family: 'Ubuntu Sans Mono';
+  /* z-index: 1; */
+  overflow: hidden;
+}
+
+/* .nav-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100%;
+  background-color: #008080;
+  transition: width .35s;
+  z-index: -1;
+} */
+
+.nav-btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #008080;
+  transition: width .25s;
+  z-index: -1;
+}
+
+.nav-btn:hover {
+  height: 100%;
+  background-color: #008080;
+  transition: all .35s;
+  color: #ffec8b
+}
+
+.nav-btn:hover:after {
+  width: 100%;
 }
 
 .intro-div {
-  padding: 150px 0;
-  border-bottom: 1px solid rgb(142, 75, 0);
+  padding: 150px 0 0 0;
+  /* border-bottom: 2px solid #e8c100; */
   margin: 0 20px;
 }
 
 .intro-words{
   font-size: 3.5rem;
   font-weight: bold;
-  color: rgb(84, 43, 0);
-  /* overflow: hidden; */
-  /* width: 6ch; */
-  /* animation: 2s typing steps(6, end) forwards; */
+  color: #fd571a;
 }
 
-/*
-@keyframes typing {
-  from {
-    width: 1ch;
-  } to {
-    width: 19ch;
-  }
-} */
 .contact-me-div {
   padding-top: 150px;
   display: flex;
@@ -79,19 +111,26 @@ body {
   align-items: center;
   gap: 20px;
 }
+
+.contact-me-div a {
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+}
+
 .linkedin-icon {
   font-weight: bold;
-  color: white;
   background-color: rgb(0, 119, 181);
-  border-radius: 5px;
   padding: 5px;
 }
 
 .github-icon {
-  color: white;
   background-color: rgb(36, 41, 46);
-  border-radius: 5px;
-  padding: 5px 8px;
+  padding: 5px 10px;
+}
+
+.contact-me-div a:hover {
+  scale: 1.1;
 }
 
 .contact-me-icon {
@@ -101,17 +140,23 @@ body {
   padding: 4px 8px;
 }
 
+.contact-me-icon:hover {
+  background-color: #fef6ce;
+  /* vertical overlap */
+  transform: translateY(-2px);
+  transition: all 0.3s;
+}
 
 /* About */
 .about-section-div {
-  border-bottom: 1px solid rgb(142, 75, 0);
+  border-bottom: 2px solid #e8c100;
   margin: 0 20px;
 }
 
 .section-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: rgb(84, 43, 0);
+  color: #008080;
   margin: 30px 0;
 }
 
@@ -137,8 +182,8 @@ body {
 .my-bg-two-side-div h3 {
   font-size: 1.5rem;
   padding: 10px 15px;
-  color: white;
-  background-color: rgb(84, 43, 0);
+  color: #008080;
+  background-color: #fce053;
   border-radius: 10px;
 }
 
@@ -169,9 +214,34 @@ body {
   color: rgb(84, 43, 0);
 }
 
+.top-btn-div {
+  display: flex;
+  justify-content: right;
+  margin: 20px 0;
+  /* justify-content: center; */
+  
+}
+
+.top-btn {
+  /* border: 2px solid #008080;
+  background-color: rgb(255, 242, 229);
+  border-radius: 50%;
+  padding: 2px 23px 0 23px; */
+  font-size: 6rem;
+  font-weight: bold;
+  color: #008080;
+  font-family: 'Dosis';
+  cursor: pointer;
+}
+
+.top-btn:hover {
+  color: #800000;
+}
+
 /* Projects */
 .project-section-div {
-  height: 800px;
+  height: 650px;
+  margin: 0 20px;
 }
 .projects-list {
   display: flex;
@@ -181,7 +251,7 @@ body {
 
 .project-div {
   width: 300px;
-  border: 2px solid rgb(142, 75, 0);
+  border: 2px solid #d3b000;
   border-radius: 10px;
   padding: 15px;
   display: flex;
@@ -194,7 +264,7 @@ body {
   padding: 5px 0;
   border-radius: 10px;
   background-color: rgb(255, 242, 229);
-  border: 1px solid rgb(142, 75, 0);
+  border: 1px solid #fce053;
 }
 
 .project-work {
@@ -213,4 +283,30 @@ body {
 
 .project-links {
   margin: 20px 0
+}
+
+/* footer */
+.footer-div {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #e8c100;
+  height: 75px;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #a98d03;
+}
+
+
+.color {
+  color:#966F56; 
+  color: #008080;
+  color: #F7DB4F;
+  color: #D95B43;
+  color: #B6C5B7;
+  color: #FF7F50;
+  color: #800000;
+  color:  #556B2F;
+  color: #A9D3D3;
 }
