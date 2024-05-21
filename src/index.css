@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,207 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+body {
+  /* width: 100%; */
+  height: 100%;
+  background-color: rgb(255, 230, 202);
+  font-family: 'Ubuntu Sans Mono';
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
+  padding: 10px 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgb(104, 54, 0);
+  border-bottom: 1px solid rgb(142, 75, 0);
+}
+
+.name-div {
+  padding: 0 10px;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: rgb(130, 79, 22);
+  color: rgb(255, 255, 255);
+  font-family: 'Ubuntu Sans Mono';
+  /* border: 1px solid rgb(104, 54, 0); */
+  cursor: pointer;
+}
+
+.intro-div {
+  padding: 150px 0;
+  border-bottom: 1px solid rgb(142, 75, 0);
+  margin: 0 20px;
+}
+
+.intro-words{
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: rgb(84, 43, 0);
+  /* overflow: hidden; */
+  /* width: 6ch; */
+  /* animation: 2s typing steps(6, end) forwards; */
+}
+
+/*
+@keyframes typing {
+  from {
+    width: 1ch;
+  } to {
+    width: 19ch;
+  }
+} */
+.contact-me-div {
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.linkedin-icon {
+  font-weight: bold;
+  color: white;
+  background-color: rgb(0, 119, 181);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.github-icon {
+  color: white;
+  background-color: rgb(36, 41, 46);
+  border-radius: 5px;
+  padding: 5px 8px;
+}
+
+.contact-me-icon {
+  color: rgb(104, 54, 0);
+  border: 1px solid rgb(104, 54, 0);
+  border-radius: 5px;
+  padding: 4px 8px;
+}
+
+
+/* About */
+.about-section-div {
+  border-bottom: 1px solid rgb(142, 75, 0);
+  margin: 0 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(84, 43, 0);
+  margin: 30px 0;
+}
+
+.about-my-intro {
+  margin: 40px 30px;
+}
+
+.my-bg-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0 20px;
+}
+
+.my-bg-two-side-div {
+  width: 100%;
+  height: 650px;
+  text-align: center;
+  /* border: 1px solid rgb(142, 75, 0); */
+}
+
+.my-bg-two-side-div h3 {
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  color: white;
+  background-color: rgb(84, 43, 0);
+  border-radius: 10px;
+}
+
+.bg-content-div {
+  padding: 0 30px;
+  text-align: left;
+}
+
+.bg-content-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0.3;
+}
+
+.big-text {
+  font-size: 1.1rem;
+  color: rgb(84, 43, 0);
+}
+
+.bold-text {
+  font-weight: bold;
+  color: rgb(84, 43, 0);
+}
+
+.small-text {
+  font-size: 0.8rem;
+  color: rgb(84, 43, 0);
+}
+
+/* Projects */
+.project-section-div {
+  height: 800px;
+}
+.projects-list {
+  display: flex;
+  margin: 0 20px;
+  gap: 25px;
+}
+
+.project-div {
+  width: 300px;
+  border: 2px solid rgb(142, 75, 0);
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-header {
+  width: 100%;
+  padding: 5px 0;
+  border-radius: 10px;
+  background-color: rgb(255, 242, 229);
+  border: 1px solid rgb(142, 75, 0);
+}
+
+.project-work {
+  font-size: 0.8rem;
+}
+
+.project-desc {
+  margin-top: 30px;
+}
+
+.project-tech {
+  font-size: 0.8rem; 
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.project-links {
+  margin: 20px 0
 }
