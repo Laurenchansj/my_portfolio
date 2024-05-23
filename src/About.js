@@ -1,4 +1,5 @@
 import './index.css';
+import { motion, useTransform, useScroll, useMotionValueEvent, useSpring } from 'framer-motion';
 
 export default function About() {
     // my intro is about actively finding a web development job or internship.
@@ -41,12 +42,14 @@ export default function About() {
         category: 'Web Development',
         skills: 'HTML, CSS, JavaScript, React.js, Next.js, Node.js'
     }, {
+        category: 'Mobile Development',
+        skills: 'React Native'
+    }, {
         category: 'Database Management',
         skills: 'Oracle SQL, MySQL, Firebase'
     }, {
         category: 'Object-Oriented Programming',
         skills: 'Python, Java, C#'
-    
     }, {
         category: 'Tools',
         skills: 'Git, GitHub, VS Code, Postman'
@@ -58,13 +61,27 @@ export default function About() {
         skills: 'Chinese (Native), English (Advanced)'
     }]
 
+    // const bgColor = useSpring(
+    //     "#fce053", {stiffness: 100}
+    // );
+    const { scrollYProgress } = useScroll(); 
+    // useMotionValueEvent(scrollYProgress, "Change", (latest) => {
+    //     console.log(latest);
+    // }
+    // );
+    const scaleX = useSpring(scrollYProgress, {stiffness: 80, damping: 30})
+
+
     return (
         <div>
             <p className='section-title'>About Me</p>
+            {/* <motion.div initial={{opacity: 0,}} whileInView={{opacity:1,}} viewport={{margin: "-200px"}} style={{backgroundColor: bgColor}}> */}
             <p className='about-my-intro'> {myIntro} </p>
             <div className="my-bg-div">
                 <div className="my-bg-two-side-div">
-                    <h3>Education</h3>
+                    <motion.div style={{scaleX}} whileInView={{opacity:1,}} viewport={{margin: "-200px"}}>
+                        <h3>Education</h3>
+                    </motion.div>
                     {myEdu.map((edu, index) => (
                         <div key={index} className='bg-content-div'>
                             <div className='bg-content-line'>
@@ -77,7 +94,9 @@ export default function About() {
                             </div>
                         </div>
                     ))}
-                     <h3>Experience</h3>
+                    <motion.div style={{scaleX}} whileInView={{opacity:1,}} viewport={{margin: "-200px"}}>
+                    <h3>Experience</h3>
+                    </motion.div>
                     {myExp.map((exp, index) => (
                         <div key={index} className='bg-content-div'>
                         <div className='bg-content-line'>
@@ -95,17 +114,19 @@ export default function About() {
                     ))}
                 </div>
                 <div className="my-bg-two-side-div">
-                   <h3>Skills & Others</h3>
-                   {mySkills.map((skill, index) => (
-                       <div key={index} className='bg-content-div'>
-                           <div className='bg-content-line'>
-                               <p className='bold-text big-text'>{skill.category}</p>
-                           </div>
-                           <div className='bg-content-line'>
-                               <p>{skill.skills}</p>
-                           </div>
-                       </div>
-                   ))}
+                <motion.div style={{scaleX}} whileInView={{opacity:1,}} viewport={{margin: "-200px"}}>
+                    <h3>Skills & Others</h3>
+                </motion.div>
+                {mySkills.map((skill, index) => (
+                    <div key={index} className='bg-content-div'>
+                        <div className='bg-content-line'>
+                            <p className='bold-text big-text'>{skill.category}</p>
+                        </div>
+                        <div className='bg-content-line'>
+                            <p>{skill.skills}</p>
+                        </div>
+                    </div>
+                ))}
                 </div>
             </div>
             

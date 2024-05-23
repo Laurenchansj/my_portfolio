@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 
 export default function Projects() {
     const myProjects = [{
@@ -25,42 +26,44 @@ export default function Projects() {
         link: 'No Website',
         github: 'https://github.com/SarahNT1/Library_Management'
     }, {
-        name: 'Comming Soon',
-        work: '',
-        desc: '...',
-        tech: '...',
+        name: 'Money Tracker',
+        work: 'Group Project',
+        desc: 'A money tracker that allows users to track their expenses and incomes.',
+        tech: 'React Native',
         hasLink: false,
-        link: 'None',
-        github: '...'
+        link: 'No Website',
+        github: 'https://github.com/HarryLee87/MoneyDancers'
     }];
 
     return (
         <div>
             <p className="section-title">Projects</p>
-            <div className="projects-list">
-                {myProjects.map((project, index) => (
-                    <div key={index} className="project-div">
-                        <div className="project-header">
-                            <div className="project-name bold-text">{project.name}</div>
-                            <div className="project-work">{project.work}</div>
-                        </div>
-                        <div className="project-desc">{project.desc}</div>
-                        <div className="project-tech">tech: {project.tech}</div>
-                        <div className="project-links">
-                            {project.hasLink ? (
-                                <a href={project.link} target="_blank" rel="noreferrer">
-                                    <div className="project-link">Website</div>
+            <motion.div initial={{opacity: 0,}} whileInView={{opacity:1,}} viewport={{margin: "-100px"}}>
+                <div className="projects-list">
+                    {myProjects.map((project, index) => (
+                        <div key={index} className="project-div">
+                            <div className="project-header">
+                                <div className="project-name bold-text">{project.name}</div>
+                                <div className="project-work">{project.work}</div>
+                            </div>
+                            <div className="project-desc">{project.desc}</div>
+                            <div className="project-tech">tech: {project.tech}</div>
+                            <div className="project-links">
+                                {project.hasLink ? (
+                                    <a href={project.link} target="_blank" rel="noreferrer">
+                                        <div className="project-link">Website</div>
+                                    </a>
+                                ) : (
+                                    <div className="project-link">{project.link}</div>
+                                )}
+                                <a href={project.github} target="_blank" rel="noreferrer">
+                                    <div className="project-link">GitHub</div>
                                 </a>
-                            ) : (
-                                <div className="project-link">{project.link}</div>
-                            )}
-                            <a href={project.github} target="_blank" rel="noreferrer">
-                                <div className="project-link">GitHub</div>
-                            </a>
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
+            </motion.div>
         </div>
     );
 }

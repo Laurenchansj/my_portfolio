@@ -5,6 +5,8 @@ import { animateScroll as scroll } from 'react-scroll';
 import About from './About';
 import Projects from './Projects';
 import Wave from 'react-wavify';
+import ContactMe from './ContactMe';
+
 
 export default function App() {
   const myName = `
@@ -37,6 +39,16 @@ export default function App() {
     }
   };
 
+  const handleContactClick = () => {
+    const contactDiv = document.getElementById('contact');
+    if (contactDiv) {
+      scroll.scrollTo(contactDiv.offsetTop, {
+        duration: 500,
+        smooth: 'easeInOutQuad'
+      });
+    }
+  };
+
   const [contact_me_hover, setContactMeHover] = useState(false);
 
   const handleGoToTopClick = () => {
@@ -48,6 +60,7 @@ export default function App() {
       });
     }
   };
+
 
 
   return (
@@ -69,10 +82,11 @@ export default function App() {
           <a className='linkedin-icon' href='https://www.linkedin.com/in/tzechi-chan/' target='_blank' rel='noreferrer'>in</a>
           <a className='github-icon' href='https://github.com/Laurenchansj' target='_blank' rel='noreferrer'>GitHub</a>
           <div>|</div>
-          <div className='contact-me-icon' onMouseEnter={() => setContactMeHover(true)} onMouseLeave={() => setContactMeHover(false)}>
-            {contact_me_hover ? '@ Email Me' : 'Contact Me'}
+          <div className='contact-me-icon' onMouseEnter={() => setContactMeHover(true)} onMouseLeave={() => setContactMeHover(false)} onClick={handleContactClick}>
+            {contact_me_hover ? 'Send Email' : 'Contact Me'}
           </div>
         </div>
+        
         <Wave fill='#008080' paused={false} options={{height: 60, amplitude:60, speed: 0.15, points: 4}}></Wave>
       </div>
       <div id='about' className='about-section-div'>
@@ -82,7 +96,14 @@ export default function App() {
         </div>
       </div>
       <div id='projects' className='project-section-div'>
+        
         <Projects />
+        <div className='top-btn-div'>
+          <div onClick={handleGoToTopClick} className='top-btn'>^</div>
+        </div>
+      </div>
+      <div id='contact'>
+        <ContactMe />
         <div className='top-btn-div'>
           <div onClick={handleGoToTopClick} className='top-btn'>^</div>
         </div>
