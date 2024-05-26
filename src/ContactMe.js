@@ -32,7 +32,7 @@ export default function ContactMe() {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        console.log("check: ", service_id, template_id, user_id);
+        // console.log("check: ", service_id, template_id, user_id);
 
         emailjs
         .sendForm(service_id, template_id, form.current, {
@@ -47,7 +47,8 @@ export default function ContactMe() {
             },
             (error) => {
             console.log('FAILED...', error.text);
-            alert("Sorry, Email sent unsuccessfully. Please try again. Error: ", error.text);
+            // alert("Sorry, Email sent unsuccessfully. Please try again. Error: ", error.text);
+            alert("Sorry, Email sent unsuccessfully. This functionality will be fixed soon.");
             },
         );
     };
