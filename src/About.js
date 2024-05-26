@@ -79,9 +79,9 @@ export default function About() {
             <p className='about-my-intro'> {myIntro} </p>
             <div className="my-bg-div">
                 <div className="my-bg-two-side-div">
-                    <motion.div style={{scaleX}} whileInView={{opacity:1,}} viewport={{margin: "-200px"}}>
+                    {/* <motion.div style={{scaleX}} whileInView={{opacity:1,}} viewport={{margin: "-200px"}}> */}
                         <h3>Education</h3>
-                    </motion.div>
+                    {/* </motion.div> */}
                     {myEdu.map((edu, index) => (
                         <div key={index} className='bg-content-div'>
                             <div className='bg-content-line'>
@@ -94,9 +94,9 @@ export default function About() {
                             </div>
                         </div>
                     ))}
-                    <motion.div style={{scaleX}} whileInView={{opacity:1,}} viewport={{margin: "-200px"}}>
+                    {/* <motion.div style={{scaleX}} whileInView={{opacity:1,}} viewport={{margin: "-200px"}}> */}
                     <h3>Experience</h3>
-                    </motion.div>
+                    {/* </motion.div> */}
                     {myExp.map((exp, index) => (
                         <div key={index} className='bg-content-div'>
                         <div className='bg-content-line'>
@@ -114,9 +114,9 @@ export default function About() {
                     ))}
                 </div>
                 <div className="my-bg-two-side-div">
-                <motion.div style={{scaleX}} whileInView={{opacity:1,}} viewport={{margin: "-200px"}}>
+                {/* <motion.div style={{scaleX}} whileInView={{opacity:1,}} viewport={{margin: "-200px"}}> */}
                     <h3>Skills & Others</h3>
-                </motion.div>
+                {/* </motion.div> */}
                 {mySkills.map((skill, index) => (
                     <div key={index} className='bg-content-div'>
                         <div className='bg-content-line'>
@@ -129,7 +129,6 @@ export default function About() {
                 ))}
                 </div>
             </div>
-            
         </div>
     );
 };

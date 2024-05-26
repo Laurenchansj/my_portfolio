@@ -24,7 +24,7 @@ export default function Projects() {
         tech: 'C#, Razor, MySQL',
         hasLink: false,
         link: 'No Website',
-        github: 'https://github.com/SarahNT1/Library_Management'
+        github: 'https://github.com/Laurenchansj/Library_Management'
     }, {
         name: 'Money Tracker',
         work: 'Group Project',
@@ -32,7 +32,7 @@ export default function Projects() {
         tech: 'React Native',
         hasLink: false,
         link: 'No Website',
-        github: 'https://github.com/HarryLee87/MoneyDancers'
+        github: 'https://github.com/Laurenchansj/MoneyDancers'
     }];
 
     return (

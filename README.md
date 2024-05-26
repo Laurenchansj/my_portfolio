@@ -49,6 +49,14 @@ npm install react-simple-typewriter
 npm install react-wavify
 ```
 
+```
+npm install framer-motion
+```
+
+```
+npm install @emailjs/browser
+```
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
