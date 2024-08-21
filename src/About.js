@@ -6,8 +6,8 @@ export default function About() {
     const myIntro = (
         <>
         Hello, my name is Tzechi.
-        I am currently studying at the Southern Alberta Institute of Technology (SAIT) for a software development diploma. <br />
-        I am planning to graduate this August and actively looking for a web development job or internship.<br />
+        Having recently completed the software development diploma at Southern Alberta Institute of Technology, <br />
+        I am looking for a job related to web development.<br />
         Please feel free to contact me if you have any questions or there is any opportunity to discuss my further qualifications.
         </>
     )
@@ -15,7 +15,7 @@ export default function About() {
     const myEdu = [{
         school: 'Southern Alberta Institute of Technology',
         program: 'Software Development Diploma',
-        duration: '01/2023 - Now',
+        duration: '01/2023 - 08/2024',
         location: 'Calgary, Alberta, Canada'
     }, {
         school: 'Soochow University',
@@ -40,7 +40,7 @@ export default function About() {
 
     const mySkills = [{
         category: 'Web Development',
-        skills: 'HTML, CSS, JavaScript, React.js, Next.js, Node.js'
+        skills: 'HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Node.js'
     }, {
         category: 'Mobile Development',
         skills: 'React Native'
