@@ -64,7 +64,7 @@ return (
                             Name
                         </th>
                         <td>
-                            <input type="text" name="user_name" className='contact_input' value={input_name} onChange={handleNameChange} required/>
+                            <input type="text" placeholder="Please enter your name" name="user_name" className='contact_input' value={input_name} onChange={handleNameChange} required/>
                         </td>
                     </tr>
                     <tr className='contact_each_row'>
@@ -72,7 +72,7 @@ return (
                             Email
                         </th>
                         <td>
-                            <input type="email" name="user_email" className='contact_input' value={input_email} onChange={handleEmailChange} required/>
+                            <input type="email" placeholder="Please enter your email" name="user_email" className='contact_input' value={input_email} onChange={handleEmailChange} required/>
                         </td>
                     </tr>
                     <tr className='contact_each_row'>

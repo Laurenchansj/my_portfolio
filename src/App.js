@@ -109,7 +109,7 @@ export default function App() {
         </div>
       </div>
       <footer className='footer-div'>
-        <div className='footer-name'>Made by Tzechi Chan</div>
+        <div className='footer-name'>Made by Tzechi (Lauren) Chan</div>
         <div className='footer-email'>laurenchansj@gmail.com</div>
       </footer>
     </div>

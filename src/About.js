@@ -5,7 +5,6 @@ export default function About() {
     // my intro is about actively finding a web development job or internship.
     const myIntro = (
         <>
-        Hello, my name is Tzechi.
         Having recently completed the software development diploma at Southern Alberta Institute of Technology, <br />
         I am looking for a job related to web development.<br />
         Please feel free to contact me if you have any questions or there is any opportunity to discuss my further qualifications.
@@ -25,6 +24,12 @@ export default function About() {
     }];
 
     const myExp = [{
+        company: 'Gong Cha Canada',
+        position: 'Barista',
+        duration: '02/2024 - Now',
+        location: 'Calgary, Alberta, Canada',
+        desc: '- Developed strong communication skills and resolving inquiries effectively.'
+    }, {
         company: 'ChainSea Information Integration Co., Ltd.',
         position: 'Accounting Assistant',
         duration: '09/2021 - 12/2021',
@@ -40,7 +45,7 @@ export default function About() {
 
     const mySkills = [{
         category: 'Web Development',
-        skills: 'HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Node.js'
+        skills: 'HTML, CSS, JavaScript, TypeScript, ReactJS, NextJS, NodeJS'
     }, {
         category: 'Mobile Development',
         skills: 'React Native'
@@ -56,6 +61,12 @@ export default function About() {
     }, {
         category: 'Hackathon',
         skills: 'Participated in YYC Hacks 2024'
+    }, {
+        category: 'Volunteer',
+        skills: 'Volunteering in non-technical positions for DEVFESTYYC 2024'
+    }, {
+        category: 'Certificate',
+        skills: `Git Essential Training: The Basics (2019) on LinkedIn Learning`
     }, {
         category: 'Language',
         skills: 'Chinese (Native), English (Advanced)'
