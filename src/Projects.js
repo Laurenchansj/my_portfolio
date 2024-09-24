@@ -8,13 +8,25 @@ export default function Projects() {
         tech: 'React.js, Vercel',
         hasLink: false,
         link: '(Current Viewing)',
+        repo: 1,
         github: 'https://github.com/Laurenchansj/my_portfolio'
+    },{
+        name: 'Inventory Management System',
+        work: 'Group Project',
+        desc: 'About Capstone Project for SAIT PROJ 309-SDB: Care Inc. Audiology Inventory Management System.',
+        tech: 'React.js, Next.js, Node.js,TypeScript, PostgreSQL',
+        hasLink: false,
+        link: 'No Website',
+        repo: 2,
+        github1: 'https://github.com/Laurenchansj/care-inc-IMS-frontend',
+        github2: 'https://github.com/Laurenchansj/care-inc-IMS-backend'
     },{
         name: 'Travel Blog',
         work: 'Group Project',
         desc: 'A travel blog website that allows users to share their travel experiences.',
         tech: 'React.js, Next.js, Node.js, Google Map API, Firebase, Vercel',
         hasLink: true,
+        repo: 1,
         link: 'https://web-dancers.vercel.app/',
         github: 'https://github.com/Laurenchansj/WebDancers'
     }, {
@@ -24,6 +36,7 @@ export default function Projects() {
         tech: 'C#, MAUI, MySQL',
         hasLink: false,
         link: 'No Website',
+        repo: 1,
         github: 'https://github.com/Laurenchansj/Library_Management'
     }, {
         name: 'Money Tracker',
@@ -32,6 +45,7 @@ export default function Projects() {
         tech: 'React Native',
         hasLink: false,
         link: 'No Website',
+        repo: 1,
         github: 'https://github.com/Laurenchansj/MoneyDancers'
     }];
 
@@ -49,16 +63,29 @@ export default function Projects() {
                             <div className="project-desc">{project.desc}</div>
                             <div className="project-tech">tech: {project.tech}</div>
                             <div className="project-links">
-                                {project.hasLink ? (
+                                {project.hasLink && project.repo === 1 ? (
                                     <a href={project.link} target="_blank" rel="noreferrer">
                                         <div className="project-link">Website</div>
                                     </a>
                                 ) : (
-                                    <div className="project-link">{project.link}</div>
+                                    // <div className="project-link">{project.link}</div>
+                                    <div></div>
                                 )}
-                                <a href={project.github} target="_blank" rel="noreferrer">
-                                    <div className="project-link">GitHub</div>
-                                </a>
+                                { project.repo === 1 ? (
+                                    <a href={project.github} target="_blank" rel="noreferrer">
+                                        <div className="project-link">GitHub</div>
+                                    </a>
+                                ):(
+                                    <div>
+                                        <a href={project.github1} target="_blank" rel="noreferrer">
+                                            <div className="project-link">Front-End GitHub</div>
+                                        </a>
+                                        <a href={project.github2} target="_blank" rel="noreferrer">
+                                            <div className="project-link">Back-End GitHub</div>
+                                        </a>
+                                    </div>
+                                )}
+                                
                             </div>
                         </div>
                     ))}
