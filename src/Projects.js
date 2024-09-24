@@ -21,7 +21,7 @@ export default function Projects() {
         name: 'Library Management System',
         work: 'Group Project',
         desc:  'A library management system that allows users to borrow and return books.',
-        tech: 'C#, Razor, MySQL',
+        tech: 'C#, MAUI, MySQL',
         hasLink: false,
         link: 'No Website',
         github: 'https://github.com/Laurenchansj/Library_Management'

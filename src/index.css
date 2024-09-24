@@ -33,6 +33,20 @@ body {
   overflow: hidden;
 }
 
+@media (max-width: 650px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar-right {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  .nav-btn {
+    padding: 2px 3px;
+    font-size: small;
+  }
+}
+
 .name-div {
   padding: 0 10px;
 }
@@ -150,6 +164,12 @@ body {
   scale: 1.1;
 }
 
+@media (max-width: 650px) {
+  .contact-me-div { 
+    flex-direction: column;
+  }
+}
+
 /* About */
 .about-section-div {
   border-bottom: 2px solid #e3bd00;
@@ -170,14 +190,14 @@ body {
 .my-bg-div {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: top;
   gap: 20px;
   margin: 0 20px;
 }
 
 .my-bg-two-side-div {
   width: 100%;
-  height: 750px;
+  /* height: 750px; */
   text-align: center;
   /* border: 1px solid rgb(142, 75, 0); */
 }
@@ -206,12 +226,29 @@ body {
   line-height: 0.3;
 }
 
-@media (max-width: 600px){
+@media (max-width: 1500px){
   .bg-content-line {
     flex-direction: column;
+    line-height: 1;
+    text-align: center;
+  }
+}
+
+@media (max-width: 650px){
+  .my-bg-div {
+    flex-direction: column;
+  }
+  .my-bg-two-side-div h3 {
+    font-size: 1.5rem;
+  }
+  .bg-content-line {
+    flex-direction: column;
+    line-height: 1;
+    text-align: center;
   }
   .my-bg-two-side-div {
     width: 100%;
+    height: 100%;
   }
   
 }
@@ -257,7 +294,7 @@ body {
 
 /* Projects */
 .project-section-div {
-  height: 650px;
+  /* height: 650px; */
   margin: 0 20px;
   border-bottom: 2px solid #e3bd00;
 }
@@ -308,6 +345,13 @@ body {
   margin: 20px 0
 }
 
+@media (max-width: 650px) {
+  .projects-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /* contact me */
 .contact-div {
   display: flex;
@@ -328,6 +372,7 @@ body {
   gap: 20px;
   align-items: center;
 }
+
 .contact_form_table th {
   font-size: x-large;
   font-family: 'Ubuntu Sans Mono';
@@ -374,6 +419,20 @@ body {
   scale: 1.1;
 }
 
+@media (max-width:650px) {
+  .contact_submit_btn {
+    translate: 20px;
+  }
+  .contact_each_row {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 10px;
+  }
+  .contact_form_table th {
+    text-align: center;
+  }
+
+}
 
 /* footer */
 .footer-div {
@@ -391,7 +450,7 @@ body {
 
 
 
-.color {
+/* .color {
   color:#966F56; 
   color: #008080;
   color: #F7DB4F;
@@ -409,4 +468,4 @@ body {
   border: 1px solid #008080;
   background-color: #008080;
   z-index: 1;
-}
+} */

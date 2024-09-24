@@ -96,7 +96,6 @@ export default function App() {
         </div>
       </div>
       <div id='projects' className='project-section-div'>
-        
         <Projects />
         <div className='top-btn-div'>
           <div onClick={handleGoToTopClick} className='top-btn'>^</div>
