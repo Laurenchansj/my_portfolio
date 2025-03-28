@@ -69,7 +69,7 @@ export default function About() {
         skills: `Git Essential Training: The Basics (2019) on LinkedIn Learning`
     }, {
         category: 'Language',
-        skills: 'Chinese (Native), English (Advanced)'
+        skills: 'Chinese, English'
     }]
 
     // const bgColor = useSpring(
